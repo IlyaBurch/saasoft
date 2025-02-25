@@ -1,11 +1,12 @@
 <template>
-  <AccountList/>
+  <Button icon="pi pi-plus"/>
 </template>
 
 <script lang="ts" setup>
-import {AccountList} from '@/widgets/AccountList'
+import Button from 'primevue/button';
 
 </script>
+
 <style>
 
 </style>

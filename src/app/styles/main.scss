@@ -5,12 +5,19 @@
 // @import "tailwindcss-primeui";
 
 
-@font-face {
-  font-family: LibreFranklin;
-  src: url('src/app/assents/fonts/LibreFranklin.ttf');
+// @font-face {
+//   font-family: LibreFranklin;
+//   src: url('src/app/assents/fonts/LibreFranklin.ttf');
+// }
+
+.libre-franklin-500 {
+  font-family: "Libre Franklin", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
 html {
   font-size: 16px;
-  font-family: LibreFranklin;
+  font-family: 'Libre Franklin';
 }

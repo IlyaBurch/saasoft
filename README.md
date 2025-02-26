@@ -1,39 +1,35 @@
-# saasoft
+# Тестовое задание для Vue Frontend Developer
 
-This template should help get you started developing with Vue 3 in Vite.
+## Стек:
+- Vue 3
+- TypeScript
+- Pinia
+- PrimeVue 4 (как UI библиотека)
+- как архитектуру проекта взял FSD
 
-## Recommended IDE Setup
+# О проекте
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Изначально я выбирал среди двух подходов - сделать таблицу, которая будет отрисовываться по массиву объектов на входе, но потом понял, что сохранять в стор будет проблематично, и изходя из KISS подхода решил сделать строку форм как отдельный компонент, который и будет взаимодействовать со стором, так как на мой взгляд это проще реализовать в плане логики и в целом более читаемо.
 
-## Type Support for `.vue` Imports in TS
+Насчет того, что компонент формы немного перегружен логикой - я не успевал уже нормально его декомпозировать, хотя понимаю,что в идеале всю логику валидации, подготовки поля tags и другие мелкие функции надо было выносить в отдельные файлы для простоты тестирования.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+Блок с подсказкой может сворачиваться по нажатию на кнопку со знаком вопроса.
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+## Запуск проекта
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Запустить в дев режиме
+
 
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+### Проверить на типизацию, компилировать и минимизировать для прод режима
 
 ```sh
 npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```

@@ -12,9 +12,13 @@ const app = createApp(App)
 app.use(createPinia())
 app.use(router)
 app.use(PrimeVue, {
-  theme: {
-    preset: Aura
-  }
-})
+    // Default theme configuration
+    theme: {
+        preset: Aura,
+        options: {
+            darkModeSelector: '.my-app-dark',
+        }
+    }
+ });
 
 app.mount('#app')

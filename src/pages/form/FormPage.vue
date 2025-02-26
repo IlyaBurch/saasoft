@@ -1,11 +1,15 @@
 <template>
-  <AccountList/>
+  <div class="formWidget">
+    <AccountList/>
+  </div>
 </template>
 
 <script lang="ts" setup>
 import {AccountList} from '@/widgets/AccountList'
 
 </script>
-<style>
-
+<style scoped lang="scss">
+.formWidget{
+  width: 20rem;
+}
 </style>

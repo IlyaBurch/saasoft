@@ -1,12 +1,10 @@
 <template>
+  <Button label="Переключить дневную/ночную тему" @click="toggleDarkMode()" />
   <div class="formWidget">
     <AccountList :showHelp="true" name="Учетные записи" :helpText>
-        <AccountForm v-for="account in userStore.accounts" :key="account.id" :account tags="shiet" class="list"/>
+        <AccountForm v-for="account in userStore.accounts" :key="account.id" :account/>
     </AccountList>
   </div>
-  
-  <Button class="button" label="Toggle Dark Mode" @click="toggleDarkMode()" />
-
 </template>
 
 <script lang="ts" setup>
@@ -28,8 +26,5 @@ const helpText = "Для указания нескольких меток для
 <style scoped lang="scss">
 .formWidget {
   width: 60rem;
-}
-.button {
-  margin-top: 10rem;
 }
 </style>

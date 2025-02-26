@@ -2,27 +2,24 @@
   <div class="card">
     <div class="card-header">
       <h2>{{ name }}</h2>
-      <AddButton />
+      <AddButton @click="store.addNewAccount" />
     </div>
     <HelpBlock class="card-help" v-show="showHelp" :text="helpText"/>
-    <!-- <AccountForm v-for="account in userStore.accounts" :key="account.id" :account tags="shiet" class=""/> -->
     <slot/>
   </div>
 </template>
 
 <script lang="ts" setup>
-// import AccountForm from '@/features/AccountForm/AccountForm.vue';
 import { AddButton } from '@/shared/ui/addButton'
 import { HelpBlock } from '@/shared/ui/helpBlock'
-// import { useUserStore } from '@/entites/user';
+import { useUserStore } from '@/entites/user';
+const store = useUserStore();
 
 const { name, showHelp = true } = defineProps<{
   name: string;
   showHelp: boolean;
   helpText?: string;
 }>();
-
-// const userStore = useUserStore();
 
 </script>
 
